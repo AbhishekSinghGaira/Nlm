@@ -11,6 +11,7 @@
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
+            line-height: 1.6;
         }
         h1, h2 {
             text-align: center;
@@ -21,15 +22,33 @@
             border-collapse: collapse;
             margin: 20px 0;
         }
-        table, th, td {
-            border: 1px solid #ccc;
-        }
         th, td {
+            border: 1px solid #ddd;
             padding: 10px;
             text-align: center;
         }
         th {
-            background-color: #f4f4f4;
+            background-color: #eaf4f4;
+            color: #333;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        @media print {
+            body {
+                font-size: 12pt;
+                line-height: 1.4;
+            }
+            table {
+                page-break-inside: avoid;
+            }
+            button {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -38,133 +57,152 @@
 
     <h2>1. Newton's Laws of Motion</h2>
     <table>
-        <tr>
-            <th>Law</th>
-            <th>Statement</th>
-            <th>Formula</th>
-        </tr>
-        <tr>
-            <td>1st Law (Law of Inertia)</td>
-            <td>An object remains in its state of rest or uniform motion unless acted upon by an external force.</td>
-            <td>N/A</td>
-        </tr>
-        <tr>
-            <td>2nd Law (Force and Acceleration)</td>
-            <td>The net force acting on an object is equal to the product of its mass and acceleration.</td>
-            <td>F = ma</td>
-        </tr>
-        <tr>
-            <td>3rd Law (Action and Reaction)</td>
-            <td>For every action, there is an equal and opposite reaction.</td>
-            <td><sub>F</sub> = <sub>-F</sub></td>
-        </tr>
+        <thead>
+            <tr>
+                <th>Law</th>
+                <th>Statement</th>
+                <th>Formula</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1st Law (Law of Inertia)</td>
+                <td>An object remains at rest or in uniform motion unless acted upon by an external force.</td>
+                <td>Not Applicable</td>
+            </tr>
+            <tr>
+                <td>2nd Law (Force and Acceleration)</td>
+                <td>The net force acting on an object is the product of its mass and acceleration.</td>
+                <td>F = ma</td>
+            </tr>
+            <tr>
+                <td>3rd Law (Action and Reaction)</td>
+                <td>For every action, there is an equal and opposite reaction.</td>
+                <td>\( F = -F \)</td>
+            </tr>
+        </tbody>
     </table>
 
     <h2>2. Forces in Motion</h2>
     <table>
-        <tr>
-            <th>Force</th>
-            <th>Formula</th>
-            <th>Description</th>
-        </tr>
-        <tr>
-            <td>Gravitational Force</td>
-            <td>F = mg</td>
-            <td>Force due to gravity, where (m) is mass and (g) is gravitational acceleration 9.8m/s<sup>2</sup></td>
-        </tr>
-        <tr>
-            <td>Normal Force</td>
-            <td>N = mg cosθ</td>
-            <td>Perpendicular force exerted by a surface on an object</td>
-        </tr>
-        <tr>
-            <td>Tension</td>
-            <td>T = mg + ma</td>
-            <td>Force exerted by a string or rope on an object</td>
-        </tr>
-        <tr>
-            <td>Net Force</td>
-            <td>F<sup>net</sup> = ΣF</td>
-            <td>Sum of all forces acting on an object</td>
-        </tr>
-        <tr>
-            <td>Centripetal Force</td>
-            <td>F<sup>c</sup> = mv²/r</td>
-            <td>Force acting towards the center in circular motion</td>
-        </tr>
+        <thead>
+            <tr>
+                <th>Force</th>
+                <th>Formula</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Gravitational Force</td>
+                <td>\( F = mg \)</td>
+                <td>Force due to gravity where \( g = 9.8 \, m/s^2 \).</td>
+            </tr>
+            <tr>
+                <td>Normal Force</td>
+                <td>\( N = mg \cos \theta \)</td>
+                <td>Perpendicular force exerted by a surface.</td>
+            </tr>
+            <tr>
+                <td>Tension</td>
+                <td>\( T = mg + ma \)</td>
+                <td>Force exerted by a string or rope.</td>
+            </tr>
+            <tr>
+                <td>Net Force</td>
+                <td>\( F_{net} = \Sigma F \)</td>
+                <td>Sum of all forces acting on an object.</td>
+            </tr>
+            <tr>
+                <td>Centripetal Force</td>
+                <td>\( F_c = \frac{mv^2}{r} \)</td>
+                <td>Force directed towards the center in circular motion.</td>
+            </tr>
+        </tbody>
     </table>
 
     <h2>3. Friction</h2>
     <table>
-        <tr>
-            <th>Type</th>
-            <th>Formula</th>
-            <th>Description</th>
-        </tr>
-        <tr>
-            <td>Static Friction</td>
-            <td>f<sub>s</sub> ≤ μ<sup>s</sup> N</td>
-            <td>Friction that prevents motion, up to a maximum limit</td>
-        </tr>
-        <tr>
-            <td>Kinetic Friction</td>
-            <td>f_k = μ_k N</td>
-            <td>Friction acting on a moving object</td>
-        </tr>
-        <tr>
-            <td>Rolling Friction</td>
-            <td>f_r = μ_r N</td>
-            <td>Friction acting on a rolling object</td>
-        </tr>
+        <thead>
+            <tr>
+                <th>Type</th>
+                <th>Formula</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Static Friction</td>
+                <td>\( f_s \leq \mu_s N \)</td>
+                <td>Friction that prevents motion up to a maximum limit.</td>
+            </tr>
+            <tr>
+                <td>Kinetic Friction</td>
+                <td>\( f_k = \mu_k N \)</td>
+                <td>Friction acting on a moving object.</td>
+            </tr>
+            <tr>
+                <td>Rolling Friction</td>
+                <td>\( f_r = \mu_r N \)</td>
+                <td>Friction acting on a rolling object.</td>
+            </tr>
+        </tbody>
     </table>
 
     <h2>4. Inclined Plane with Friction</h2>
     <table>
-        <tr>
-            <th>Force</th>
-            <th>Formula</th>
-            <th>Description</th>
-        </tr>
-        <tr>
-            <td>Parallel Component of Weight</td>
-            <td>F_parallel = mg sinθ</td>
-            <td>Component of gravity along the plane</td>
-        </tr>
-        <tr>
-            <td>Perpendicular Component of Weight</td>
-            <td>F_perpendicular = mg cosθ</td>
-            <td>Component of gravity perpendicular to the plane</td>
-        </tr>
-        <tr>
-            <td>Frictional Force</td>
-            <td>f = μ N</td>
-            <td>Frictional force opposing motion, where N= 0xE2 F</td>
-        </tr>
-        <tr>
-            <td>Net Force</td>
-            <td>F_net = F_parallel - f</td>
-            <td>Net force causing motion down the incline</td>
-        </tr>
+        <thead>
+            <tr>
+                <th>Force</th>
+                <th>Formula</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Parallel Component of Weight</td>
+                <td>\( F_{parallel} = mg \sin \theta \)</td>
+                <td>Component of gravity along the plane.</td>
+            </tr>
+            <tr>
+                <td>Perpendicular Component of Weight</td>
+                <td>\( F_{perpendicular} = mg \cos \theta \)</td>
+                <td>Component of gravity perpendicular to the plane.</td>
+            </tr>
+            <tr>
+                <td>Frictional Force</td>
+                <td>\( f = \mu N \)</td>
+                <td>Frictional force opposing motion.</td>
+            </tr>
+            <tr>
+                <td>Net Force</td>
+                <td>\( F_{net} = F_{parallel} - f \)</td>
+                <td>Net force causing motion down the incline.</td>
+            </tr>
+        </tbody>
     </table>
 
     <h2>5. Work-Energy Relation for Friction</h2>
     <table>
-        <tr>
-            <th>Quantity</th>
-            <th>Formula</th>
-            <th>Description</th>
-        </tr>
-        <tr>
-            <td>Work Done by Friction</td>
-            <td>W<sub>f</sub> = f × d × cosθ</td>
-            <td>Work done by friction force over distance d</td>
-        </tr>
-        <tr>
-            <td>Power</td>
-            <td>P = W/t</td>
-            <td>Rate of work done</td>
-        </tr>
+        <thead>
+            <tr>
+                <th>Quantity</th>
+                <th>Formula</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Work Done by Friction</td>
+                <td>\( W_f = f \cdot d \cdot \cos \theta \)</td>
+                <td>Work done by friction force over a distance \( d \).</td>
+            </tr>
+            <tr>
+                <td>Power</td>
+                <td>\( P = \frac{W}{t} \)</td>
+                <td>Rate of work done.</td>
+            </tr>
+        </tbody>
     </table>
-
 </body>
 </html>
